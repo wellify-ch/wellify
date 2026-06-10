@@ -1,0 +1,47 @@
+<svg viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="200" fill="#f0f9ff"/>
+
+  <!-- Meditation cushion -->
+  <ellipse cx="250" cy="165" rx="76" ry="9" fill="rgba(2,132,199,0.1)" stroke="rgba(2,132,199,0.18)" stroke-width="1"/>
+
+  <!-- Floating peace dots above head -->
+  <circle cx="250" cy="17"  r="3"   fill="rgba(2,132,199,0.22)"/>
+  <circle cx="236" cy="23"  r="2"   fill="rgba(2,132,199,0.16)"/>
+  <circle cx="264" cy="23"  r="2"   fill="rgba(2,132,199,0.16)"/>
+  <circle cx="250" cy="10"  r="1.5" fill="rgba(2,132,199,0.12)"/>
+  <circle cx="228" cy="30"  r="1.5" fill="rgba(2,132,199,0.10)"/>
+  <circle cx="272" cy="30"  r="1.5" fill="rgba(2,132,199,0.10)"/>
+
+  <!-- Head -->
+  <circle cx="250" cy="47" r="16" stroke="#0284c7" stroke-width="2.5" fill="rgba(2,132,199,0.08)"/>
+  <!-- Neck -->
+  <line x1="250" y1="63" x2="250" y2="76" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Torso (upright) -->
+  <line x1="250" y1="76" x2="250" y2="118" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left arm: shoulder → elbow → hand resting on knee -->
+  <line x1="244" y1="88"  x2="205" y2="110" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="205" y1="110" x2="200" y2="148" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Right arm -->
+  <line x1="256" y1="88"  x2="295" y2="110" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="295" y1="110" x2="300" y2="148" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Elbow joints -->
+  <circle cx="205" cy="110" r="3.5" fill="#0284c7"/>
+  <circle cx="295" cy="110" r="3.5" fill="#0284c7"/>
+
+  <!-- Open palms / mudra circles at knee -->
+  <circle cx="200" cy="148" r="5" fill="rgba(2,132,199,0.22)" stroke="#0284c7" stroke-width="1.8"/>
+  <circle cx="300" cy="148" r="5" fill="rgba(2,132,199,0.22)" stroke="#0284c7" stroke-width="1.8"/>
+
+  <!-- Left leg: hip → knee → foot (crosses to right side) -->
+  <line x1="246" y1="120" x2="202" y2="146" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="202" y1="146" x2="257" y2="162" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Right leg: hip → knee → foot (crosses to left side) -->
+  <line x1="254" y1="120" x2="298" y2="146" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="298" y1="146" x2="243" y2="162" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Knee joints -->
+  <circle cx="202" cy="146" r="3.5" fill="#0284c7"/>
+  <circle cx="298" cy="146" r="3.5" fill="#0284c7"/>
+</svg>
