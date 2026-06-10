@@ -1,0 +1,28 @@
+{
+  "name": "Wellify — Fitness & Lifestyle Coaching",
+  "short_name": "Wellify",
+  "description": "Ganzheitliches Coaching für deinen Körper, Geist und Lifestyle mit Yannic Henchoz.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0369a1",
+  "theme_color": "#0369a1",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["health", "fitness", "lifestyle"]
+}
