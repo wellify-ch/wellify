@@ -1063,6 +1063,63 @@ body {
   .about__badge-float { position: static; margin-top: 16px; display: inline-flex; }
 }
 
+/* HERO SPLIT LAYOUT */
+.hero__inner--split {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero__photo-col {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__photo-img {
+  width: 100%;
+  max-width: 380px;
+  height: 520px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 64px rgba(0,0,0,.35);
+}
+
+@media (max-width: 900px) {
+  .hero__inner--split { grid-template-columns: 1fr; }
+  .hero__photo-col { display: none; }
+}
+
+/* ABOUT PHOTO */
+.about__photo {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+/* SERVICE CARD IMAGE */
+.service-card__img {
+  width: calc(100% + 64px);
+  margin: -36px -32px 24px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.service-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
 /* ANIMATIONS */
 .fade-in {
   opacity: 0;
