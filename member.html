@@ -309,8 +309,11 @@
       const email  = session.user.email;
       const userId = session.user.id;
 
+      // Ensure Realtime uses the authenticated user's token
+      sb.realtime.setAuth(session.access_token);
+
       // Check if approved
-      const { data: approval } = await sb.from('approved_emails').select('email').maybeSingle();
+      const { data: approval } = await sb.from('approved_emails').select('email').eq('email', email).maybeSingle();
       if (!approval) {
         $('pendingEmailDisplay').textContent = email;
         showPanel('appPending');
@@ -323,7 +326,7 @@
       $('welcomeName').textContent = 'Willkommen, ' + name + '!';
       showPanel('appDashboard');
       loadMessages(userId);
-      subscribeMessages(userId);
+      subscribeMessages(userId, session.access_token);
     }
 
     // Poll/listen for approval
@@ -351,8 +354,8 @@
       scrollToBottom();
     }
 
-    function subscribeMessages(userId) {
-      sb.channel('member-chat')
+    function subscribeMessages(userId, accessToken) {
+      sb.channel('member-chat', { config: { private: false } })
         .on('postgres_changes', {
           event: 'INSERT', schema: 'public', table: 'messages',
           filter: 'profile_id=eq.' + userId
@@ -361,7 +364,11 @@
           appendMsg(payload.new, true);
           scrollToBottom();
         })
-        .subscribe();
+        .subscribe(status => {
+          if (status === 'CHANNEL_ERROR') {
+            setTimeout(() => subscribeMessages(userId, accessToken), 3000);
+          }
+        });
     }
 
     function appendMsg(m, animate) {

@@ -567,8 +567,12 @@
       if (!text || !currentChatProfileId) return;
       $('coachChatInput').value = ''; $('coachChatInput').style.height = 'auto';
       $('coachChatSend').disabled = true;
-      await sb.from('messages').insert({ profile_id: currentChatProfileId, content: text, sender: 'coach' });
+      const { error } = await sb.from('messages').insert({ profile_id: currentChatProfileId, content: text, sender: 'coach' });
       $('coachChatSend').disabled = false;
+      if (error) {
+        $('coachChatInput').value = text;
+        showToast('Fehler beim Senden: ' + error.message);
+      }
     }
 
     // ——— TOAST ———
