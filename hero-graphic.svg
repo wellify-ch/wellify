@@ -1,0 +1,85 @@
+<svg viewBox="0 0 380 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgHero" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#0369a1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#082f49" stop-opacity="0.9"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="380" height="520" rx="20" fill="url(#bgHero)"/>
+
+  <!-- Decorative rings -->
+  <circle cx="190" cy="240" r="175" stroke="rgba(56,189,248,0.06)" stroke-width="1.5"/>
+  <circle cx="190" cy="240" r="130" stroke="rgba(56,189,248,0.06)" stroke-width="1.5"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="190" cy="490" rx="90" ry="10" fill="rgba(0,0,0,0.25)"/>
+
+  <!-- Barbell on ground -->
+  <rect x="80" y="466" width="220" height="7" rx="3.5" fill="rgba(56,189,248,0.45)"/>
+  <rect x="78"  y="453" width="28"  height="33" rx="5" fill="rgba(56,189,248,0.35)"/>
+  <rect x="274" y="453" width="28"  height="33" rx="5" fill="rgba(56,189,248,0.35)"/>
+  <rect x="84"  y="458" width="16"  height="23" rx="3" fill="rgba(56,189,248,0.55)"/>
+  <rect x="280" y="458" width="16"  height="23" rx="3" fill="rgba(56,189,248,0.55)"/>
+
+  <!-- ===== FIGURE — Victory / overhead press pose ===== -->
+  <!-- Head -->
+  <circle cx="190" cy="62" r="30" stroke="#7dd3fc" stroke-width="2.8" fill="rgba(56,189,248,0.08)"/>
+
+  <!-- Neck -->
+  <line x1="190" y1="92"  x2="190" y2="115" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Shoulder bar -->
+  <line x1="138" y1="128" x2="242" y2="128" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Torso -->
+  <line x1="190" y1="115" x2="190" y2="285" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Hip bar -->
+  <line x1="162" y1="285" x2="218" y2="285" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- LEFT ARM — raised up holding bar overhead -->
+  <line x1="138" y1="128" x2="95"  y2="80"  stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="95"  y1="80"  x2="62"  y2="42"  stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- RIGHT ARM — raised up holding bar overhead -->
+  <line x1="242" y1="128" x2="285" y2="80"  stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="285" y1="80"  x2="318" y2="42"  stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Overhead bar (barbell being pressed) -->
+  <rect x="48"  y="35"  width="284" height="7" rx="3.5" fill="#38bdf8" opacity="0.8"/>
+  <rect x="44"  y="26"  width="26"  height="25" rx="4" fill="rgba(56,189,248,0.55)"/>
+  <rect x="310" y="26"  width="26"  height="25" rx="4" fill="rgba(56,189,248,0.55)"/>
+
+  <!-- LEFT LEG — slight stance -->
+  <line x1="168" y1="285" x2="145" y2="385" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="145" y1="385" x2="138" y2="465" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="138" y1="465" x2="112" y2="468" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- RIGHT LEG -->
+  <line x1="212" y1="285" x2="235" y2="385" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="235" y1="385" x2="242" y2="465" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="242" y1="465" x2="268" y2="468" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Joint dots -->
+  <circle cx="138" cy="128" r="4.5" fill="#7dd3fc"/>
+  <circle cx="242" cy="128" r="4.5" fill="#7dd3fc"/>
+  <circle cx="162" cy="285" r="4.5" fill="#7dd3fc"/>
+  <circle cx="218" cy="285" r="4.5" fill="#7dd3fc"/>
+  <circle cx="145" cy="385" r="4"   fill="rgba(125,211,252,0.7)"/>
+  <circle cx="235" cy="385" r="4"   fill="rgba(125,211,252,0.7)"/>
+
+  <!-- Motion / energy lines -->
+  <line x1="48"  y1="55"  x2="30"  y2="55"  stroke="rgba(56,189,248,0.4)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="46"  y1="66"  x2="24"  y2="70"  stroke="rgba(56,189,248,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="332" y1="55"  x2="350" y2="55"  stroke="rgba(56,189,248,0.4)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="334" y1="66"  x2="356" y2="70"  stroke="rgba(56,189,248,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Floating dots -->
+  <circle cx="42"  cy="180" r="4" fill="rgba(56,189,248,0.3)"/>
+  <circle cx="338" cy="160" r="5" fill="rgba(56,189,248,0.25)"/>
+  <circle cx="55"  cy="360" r="3" fill="rgba(56,189,248,0.35)"/>
+  <circle cx="328" cy="340" r="4" fill="rgba(56,189,248,0.3)"/>
+  <circle cx="345" cy="260" r="3" fill="rgba(56,189,248,0.2)"/>
+</svg>
