@@ -1,21 +1,21 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green-dark: #1a5c3a;
-  --green-mid: #2d7a52;
-  --green-light: #4caf78;
-  --green-pale: #e8f5ee;
-  --green-subtle: #f2faf5;
-  --cream: #fafaf8;
-  --dark: #111b14;
-  --dark-2: #1e2d23;
-  --text: #2c3e30;
-  --text-muted: #6b7c6e;
-  --text-light: #9aab9d;
-  --border: #e2ebe4;
+  --green-dark: #0369a1;
+  --green-mid: #0284c7;
+  --green-light: #38bdf8;
+  --green-pale: #e0f2fe;
+  --green-subtle: #f0f9ff;
+  --cream: #f8fafc;
+  --dark: #0f172a;
+  --dark-2: #1e293b;
+  --text: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --border: #e2e8f0;
   --white: #ffffff;
-  --shadow: 0 2px 16px rgba(26,92,58,.08);
-  --shadow-lg: 0 8px 40px rgba(26,92,58,.12);
+  --shadow: 0 2px 16px rgba(3,105,161,.08);
+  --shadow-lg: 0 8px 40px rgba(3,105,161,.12);
   --radius: 12px;
   --radius-lg: 20px;
   --transition: .25s ease;
@@ -233,7 +233,7 @@ body {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0d3320 0%, #1a5c3a 40%, #2d7a52 70%, #1e4d30 100%);
+  background: linear-gradient(135deg, #082f49 0%, #0369a1 40%, #0284c7 70%, #0c4a6e 100%);
   z-index: 0;
 }
 
@@ -242,8 +242,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 60% at 70% 40%, rgba(76,175,120,.15) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(26,92,58,.3) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 60% at 70% 40%, rgba(56,189,248,.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(3,105,161,.3) 0%, transparent 60%);
 }
 
 .hero__inner {
@@ -255,9 +255,9 @@ body {
 
 .hero__badge {
   display: inline-block;
-  background: rgba(76,175,120,.2);
-  border: 1px solid rgba(76,175,120,.35);
-  color: #9fe5bc;
+  background: rgba(56,189,248,.2);
+  border: 1px solid rgba(56,189,248,.35);
+  color: #bae6fd;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: .06em;
@@ -778,6 +778,43 @@ body {
   color: var(--text-muted);
 }
 
+/* PRICING PERSONAL */
+.pricing-personal {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-personal__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 56px 64px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-personal__icon {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.pricing-personal__card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.pricing-personal__card p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
 /* CTA BANNER */
 .cta-banner {
   background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
@@ -914,7 +951,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--green-light);
-  box-shadow: 0 0 0 3px rgba(76,175,120,.12);
+  box-shadow: 0 0 0 3px rgba(56,189,248,.12);
 }
 
 .form-group textarea { resize: vertical; min-height: 110px; }
