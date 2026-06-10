@@ -975,6 +975,66 @@ body {
   text-align: center;
 }
 
+/* WHATSAPP CTA */
+.whatsapp-cta {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.whatsapp-cta__icon svg {
+  width: 72px;
+  height: 72px;
+}
+
+.whatsapp-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+}
+
+.whatsapp-cta p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 360px;
+  margin: 0;
+}
+
+.btn--whatsapp {
+  background: #25D366;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.btn--whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(37,211,102,.3);
+}
+
+.whatsapp-cta__note {
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 0;
+}
+
 /* FOOTER */
 .footer {
   background: var(--dark);
