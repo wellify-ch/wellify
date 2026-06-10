@@ -123,6 +123,14 @@ body {
 
 .btn--small { padding: 10px 20px; font-size: 14px; }
 
+.nav__member-link {
+  font-size: 13px; color: rgba(255,255,255,.5); text-decoration: none;
+  font-weight: 500; transition: color var(--transition); margin-right: 4px;
+}
+.nav__member-link:hover { color: rgba(255,255,255,.9); }
+.nav.scrolled .nav__member-link { color: var(--text-muted); }
+.nav.scrolled .nav__member-link:hover { color: var(--green-dark); }
+
 .btn--ghost-nav {
   background: transparent;
   border: 1.5px solid rgba(255,255,255,.25);
