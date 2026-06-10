@@ -963,76 +963,97 @@ body {
   padding-right: 40px;
 }
 
-.form-success {
-  display: none;
-  margin-top: 16px;
-  padding: 14px 20px;
-  background: var(--green-pale);
-  border-radius: 10px;
-  color: var(--green-dark);
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
+/* BOOKING FORM */
+.contact__form-col { display: flex; flex-direction: column; gap: 16px; }
+
+.contact__form-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
 }
 
-/* WHATSAPP CTA */
-.whatsapp-cta {
+.contact__form-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.contact__form-card > p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.contact__whatsapp-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.form-error {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.form-success {
   background: var(--cream);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   text-align: center;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.whatsapp-cta__icon svg {
-  width: 72px;
-  height: 72px;
+.form-success__check {
+  width: 56px;
+  height: 56px;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 auto 8px;
 }
 
-.whatsapp-cta h3 {
+.form-success h3 {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
-  font-weight: 600;
   color: var(--dark);
-  margin: 0;
 }
 
-.whatsapp-cta p {
-  color: var(--text-muted);
-  font-size: 16px;
-  line-height: 1.65;
-  max-width: 360px;
-  margin: 0;
-}
+.form-success p { color: var(--text-muted); font-size: 15px; }
 
 .btn--whatsapp {
   background: #25D366;
   color: var(--white);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 16px;
+  gap: 8px;
+  font-size: 15px;
   font-weight: 600;
-  padding: 16px 32px;
-  width: 100%;
-  max-width: 360px;
+  padding: 12px 24px;
 }
 
 .btn--whatsapp:hover {
   background: #1ebe5d;
   transform: translateY(-1px);
   box-shadow: 0 8px 24px rgba(37,211,102,.3);
-}
-
-.whatsapp-cta__note {
-  font-size: 13px;
-  color: var(--text-light);
-  margin: 0;
+  color: var(--white);
 }
 
 /* FOOTER */
