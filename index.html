@@ -394,6 +394,82 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Häufige Fragen</p>
+        <h2 class="section__title">Du fragst, ich antworte.</h2>
+        <p class="section__sub">Alles was du vor dem Start wissen möchtest.</p>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Wie läuft das kostenlose Erstgespräch ab?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Das Erstgespräch dauert ca. 30 Minuten und findet per Video-Call statt. Wir schauen gemeinsam wo du gerade stehst, was deine Ziele sind und ob wir gut zusammenpassen. Kein Druck, keine Verpflichtung.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Findet das Coaching online oder vor Ort statt?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Das Coaching findet hauptsächlich online statt — per Video-Call, Chat und über die Wellify App. So bist du örtlich flexibel und kannst von überall in der Schweiz mit mir arbeiten.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Wie lange dauert ein Coaching-Programm?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Die meisten meiner Klienten starten mit 3 Monaten — das ist der Zeitraum in dem echte, nachhaltige Veränderungen entstehen. Wir besprechen gemeinsam was für dich sinnvoll ist.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Was brauche ich, um loszulegen?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Nur dein Smartphone und die Motivation etwas zu verändern. Die Wellify App ist kostenlos im App Store erhältlich. Alles weitere besprechen wir beim Erstgespräch.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Für wen ist Wellify Coaching geeignet?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Für alle die etwas an ihrer Gesundheit, Fitness oder ihrem Lifestyle verändern möchten — egal ob Anfänger oder fortgeschritten, jung oder älter. Ich passe das Coaching immer individuell an deine Situation an.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Was ist der Unterschied zwischen Fitness- und Lifestyle-Coaching?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Fitness Coaching fokussiert auf Training und Ernährung — Kraft, Ausdauer, Körperzusammensetzung. Lifestyle Coaching geht tiefer: Schlaf, Stress, Gewohnheiten, mentale Stärke. Das ganzheitliche Paket kombiniert beides für maximale Transformation.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Wie läuft die Zusammenarbeit im Alltag ab?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Du erfasst täglich kurz deine Werte in der Wellify App (Schlaf, Bewegung, Stimmung etc.) und kannst mir jederzeit eine Nachricht schreiben. Ich melde mich regelmässig mit Feedback, Anpassungen und Motivation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container contact__inner">
@@ -501,6 +577,23 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+  /* FAQ Accordion */
+  document.querySelectorAll('.faq__question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq__question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.classList.add('open');
+      }
+    });
+  });
+  </script>
   <script>
   /* ——— LEBENSCHECK ——— */
   (function() {
