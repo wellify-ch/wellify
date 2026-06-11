@@ -1611,14 +1611,19 @@ body {
   display: block;
 }
 
-.gym-banner__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.72) 45%, rgba(0,0,0,0.1));
+.gym-banner__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 4px 0;
+  flex-wrap: wrap;
+}
+
+.gym-banner__caption-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 48px 56px;
+  gap: 4px;
 }
 
 .gym-banner__label {
@@ -1626,17 +1631,15 @@ body {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 12px;
+  color: var(--text-muted);
 }
 
 .gym-banner__title {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   font-weight: 800;
-  color: #fff;
-  max-width: 420px;
+  color: var(--text);
   line-height: 1.25;
-  margin-bottom: 28px;
+  margin: 0;
 }
 
 @media (max-width: 600px) {
