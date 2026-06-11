@@ -143,6 +143,43 @@ body {
 .btn--full { width: 100%; justify-content: center; }
 
 /* NAV */
+/* ── LOGO SPLASH ── */
+.logo-splash {
+  position: relative;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-splash__img {
+  width: min(280px, 60vw);
+  height: auto;
+  display: block;
+}
+
+.logo-splash__scroll {
+  position: absolute;
+  bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
 .nav {
   position: fixed;
   top: 0;
