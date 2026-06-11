@@ -652,7 +652,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   font-weight: 600;
-  color: var(--green-pale);
+  color: #2563eb;
   line-height: 1;
   margin-bottom: 20px;
   position: relative;
