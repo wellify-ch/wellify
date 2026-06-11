@@ -1550,6 +1550,13 @@ body {
 /* GYM BANNER */
 .gym-banner {
   margin: 48px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.gym-banner__img-col {
   border-radius: var(--radius-lg);
   overflow: hidden;
   line-height: 0;
@@ -1562,20 +1569,19 @@ body {
   border-radius: var(--radius-lg);
 }
 
-.gym-banner__caption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px 4px 0;
-  flex-wrap: wrap;
-}
-
-.gym-banner__caption-text {
+.gym-banner__text-col {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 20px;
 }
+
+@media (max-width: 768px) {
+  .gym-banner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 
 .gym-banner__label {
   font-size: 12px;
