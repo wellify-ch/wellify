@@ -572,7 +572,27 @@
       if (error) {
         $('coachChatInput').value = text;
         showToast('Fehler beim Senden: ' + error.message);
+      } else {
+        sendPushNotification(currentChatProfileId, text);
       }
+    }
+
+    async function sendPushNotification(profileId, text) {
+      try {
+        const { data } = await sb.from('push_tokens').select('token').eq('profile_id', profileId).maybeSingle();
+        if (!data?.token) return;
+        await fetch('https://exp.host/--/api/v2/push/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            to: data.token,
+            title: 'Yannic hat dir geschrieben',
+            body: text.length > 80 ? text.substring(0, 80) + '…' : text,
+            sound: 'default',
+            badge: 1,
+          }),
+        });
+      } catch (_) { /* Push nicht kritisch */ }
     }
 
     // ——— TOAST ———
