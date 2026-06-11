@@ -168,15 +168,26 @@ body {
 }
 
 .nav__logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--white);
   text-decoration: none;
-  transition: color var(--transition);
+  display: flex;
+  align-items: center;
 }
 
-.nav.scrolled .nav__logo { color: var(--green-dark); }
+.nav__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+.footer__brand .nav__logo-img {
+  height: 40px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 4px 10px;
+}
 
 .nav__links {
   display: flex;
@@ -1406,7 +1417,7 @@ body {
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
-.footer__brand .nav__logo { color: var(--white); font-size: 24px; }
+.footer__brand .nav__logo { color: var(--white); font-size: 24px; display: flex; align-items: center; }
 
 .footer__brand p {
   font-size: 14px;
