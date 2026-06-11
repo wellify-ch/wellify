@@ -1592,6 +1592,59 @@ body {
   object-position: center 20%;
 }
 
+/* GYM BANNER */
+.gym-banner {
+  position: relative;
+  margin: 48px 0 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 420px;
+}
+
+.gym-banner__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.gym-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.72) 45%, rgba(0,0,0,0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 56px;
+}
+
+.gym-banner__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 12px;
+}
+
+.gym-banner__title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  max-width: 420px;
+  line-height: 1.25;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 600px) {
+  .gym-banner { height: 320px; }
+  .gym-banner__overlay { padding: 32px 28px; }
+  .gym-banner__title { font-size: 1.3rem; }
+}
+
 /* =====================================================
    MOBILE RESPONSIVE — zusätzliche Breakpoints
    ===================================================== */
