@@ -474,6 +474,19 @@ body {
   border-radius: 0 0 8px 8px;
 }
 
+.service-card__price {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0369a1;
+  margin-bottom: 8px;
+}
+
+.service-card__price span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+}
+
 .service-card__icon {
   width: 52px;
   height: 52px;
