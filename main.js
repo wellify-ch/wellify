@@ -1,8 +1,14 @@
-// Nav scroll effect
+// Nav scroll effect — versteckt auf Splash, erscheint danach
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+  const pastSplash = window.scrollY > window.innerHeight * 0.8;
+  nav.classList.toggle('scrolled', pastSplash);
+  nav.style.opacity = pastSplash ? '1' : '0';
+  nav.style.pointerEvents = pastSplash ? 'auto' : 'none';
 });
+// Initialzustand
+nav.style.opacity = '0';
+nav.style.pointerEvents = 'none';
 
 // Mobile menu
 const toggle = document.getElementById('navToggle');
