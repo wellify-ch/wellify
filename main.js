@@ -41,6 +41,18 @@ document.querySelectorAll(
 
 // Contact form (bookingForm handles submission via Supabase inline script)
 
+// DSG Banner
+(function() {
+  const banner = document.getElementById('dsgBanner');
+  const close  = document.getElementById('dsgClose');
+  if (!banner || !close) return;
+  if (localStorage.getItem('dsg_ok')) { banner.style.display = 'none'; return; }
+  close.addEventListener('click', () => {
+    banner.style.display = 'none';
+    localStorage.setItem('dsg_ok', '1');
+  });
+})();
+
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');

@@ -1932,3 +1932,63 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =====================================================
+   WHATSAPP FLOATING BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37,211,102,.55);
+}
+
+/* =====================================================
+   DSG BANNER */
+.dsg-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--dark);
+  color: rgba(255,255,255,.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 14px 24px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+.dsg-banner a {
+  color: var(--green-light);
+  text-decoration: underline;
+}
+.dsg-banner__close {
+  background: var(--green-dark);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.dsg-banner__close:hover { background: var(--green-mid); }
