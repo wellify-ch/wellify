@@ -39,20 +39,7 @@ document.querySelectorAll(
   observer.observe(el);
 });
 
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const success = document.getElementById('formSuccess');
-  const btn = this.querySelector('button[type="submit"]');
-  btn.textContent = 'Wird gesendet…';
-  btn.disabled = true;
-  setTimeout(() => {
-    success.style.display = 'block';
-    btn.textContent = 'Nachricht senden';
-    btn.disabled = false;
-    this.reset();
-  }, 1000);
-});
+// Contact form (bookingForm handles submission via Supabase inline script)
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
