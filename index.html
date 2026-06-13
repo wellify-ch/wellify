@@ -12,6 +12,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Wellify" />
+  <meta property="og:title" content="Wellify — Fitness & Lifestyle Coaching" />
+  <meta property="og:description" content="Ganzheitliches Coaching für deinen Körper, Geist und Lifestyle — individuell, nachhaltig und auf dein Leben zugeschnitten." />
+  <meta property="og:image" content="https://wellify.ch/yannic-portrait.png" />
+  <meta property="og:url" content="https://wellify.ch" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wellify — Fitness & Lifestyle Coaching" />
+  <meta name="twitter:description" content="Ganzheitliches Coaching für deinen Körper, Geist und Lifestyle — individuell, nachhaltig und auf dein Leben zugeschnitten." />
+  <meta name="twitter:image" content="https://wellify.ch/yannic-portrait.png" />
   <link rel="stylesheet" href="style.css?v=20260614" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,11 +85,11 @@
           <a href="#services" class="btn btn--ghost">Mehr erfahren</a>
         </div>
         <div class="hero__apps">
-          <p class="hero__apps-label">Wellify App herunterladen</p>
+          <p class="hero__apps-label">Wellify App — demnächst im App Store</p>
           <div class="hero__apps-badges">
             <a href="#app" class="app-badge app-badge--ios">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              <span><small>Laden im</small><strong>App Store</strong></span>
+              <span><small>Bald verfügbar im</small><strong>App Store</strong></span>
             </a>
           </div>
           <p class="hero__apps-soon">App Store — <em>demnächst verfügbar</em></p>
@@ -617,6 +626,10 @@
               <input type="text" id="bookName" placeholder="Vorname Nachname" required autocomplete="name" />
             </div>
             <div class="form-group">
+              <label for="bookEmail">E-Mail *</label>
+              <input type="email" id="bookEmail" placeholder="deine@email.ch" required autocomplete="email" />
+            </div>
+            <div class="form-group">
               <label for="bookPhone">Telefon / WhatsApp</label>
               <input type="tel" id="bookPhone" placeholder="+41 79 ..." autocomplete="tel" />
             </div>
@@ -674,12 +687,12 @@
           <h4>Informationen</h4>
           <a href="#about">Über mich</a>
           <a href="#process">Ablauf</a>
-          <a href="#pricing">Preise</a>
+          <a href="#services">Preise</a>
         </div>
         <div>
           <h4>Rechtliches</h4>
           <a href="datenschutz.html">Datenschutz</a>
-          <a href="#">Impressum</a>
+          <a href="impressum.html">Impressum</a>
           <a href="agb.html">AGB</a>
         </div>
       </div>
@@ -968,16 +981,16 @@
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         const name = document.getElementById('bookName').value.trim();
-        if (!name) {
-          showError('Bitte gib deinen Namen ein.');
-          return;
-        }
+        const email = document.getElementById('bookEmail').value.trim();
+        if (!name) { showError('Bitte gib deinen Namen ein.'); return; }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Bitte gib eine gültige E-Mail-Adresse ein.'); return; }
         submitBtn.disabled = true;
         submitBtn.textContent = 'Wird gesendet…';
         errorEl.style.display = 'none';
 
         const { error } = await client.from('bookings').insert({
           name,
+          email,
           phone: document.getElementById('bookPhone').value.trim() || null,
           service: document.getElementById('bookService').value,
           message: document.getElementById('bookMessage').value.trim() || null
