@@ -2020,22 +2020,18 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: 600;
-  color: var(--green-dark);
+  color: #fff;
   text-decoration: none;
+  background: var(--green-dark);
   border: 1.5px solid var(--green-dark);
   border-radius: var(--radius);
   padding: 11px;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), border-color var(--transition);
 }
 .offer-card__btn:hover {
-  background: var(--green-dark);
-  color: #fff;
+  background: var(--green-mid);
+  border-color: var(--green-mid);
 }
-.offer-card--highlight .offer-card__btn {
-  background: var(--green-dark);
-  color: #fff;
-}
-.offer-card--highlight .offer-card__btn:hover { background: var(--green-mid); border-color: var(--green-mid); }
 
 /* APP STRIP */
 .app-strip {
