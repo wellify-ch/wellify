@@ -1934,6 +1934,30 @@ body {
 }
 
 /* =====================================================
+   APP COMING SOON */
+.app-coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #eff6ff;
+  border-radius: 14px;
+  padding: 14px 20px;
+  color: #0369a1;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.app-coming-soon svg { flex-shrink: 0; }
+.app-coming-soon__sub {
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* =====================================================
    WHATSAPP FLOATING BUTTON */
 .whatsapp-float {
   position: fixed;
