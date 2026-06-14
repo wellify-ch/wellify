@@ -1736,7 +1736,9 @@ body {
 
 .gym-banner__img {
   width: 100%;
-  height: auto;
+  height: 420px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   border-radius: var(--radius-lg);
 }
