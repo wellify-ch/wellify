@@ -2016,23 +2016,26 @@ body {
   font-weight: 700;
 }
 .offer-card__btn {
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
   color: var(--green-dark);
   text-decoration: none;
-  transition: color var(--transition);
+  border: 1.5px solid var(--green-dark);
+  border-radius: var(--radius);
+  padding: 11px;
+  transition: background var(--transition), color var(--transition);
 }
-.offer-card__btn:hover { color: var(--green-mid); }
-.offer-card--highlight .offer-card__btn {
-  display: block;
-  text-align: center;
+.offer-card__btn:hover {
   background: var(--green-dark);
   color: #fff;
-  padding: 12px;
-  border-radius: var(--radius);
 }
-.offer-card--highlight .offer-card__btn:hover { background: var(--green-mid); }
+.offer-card--highlight .offer-card__btn {
+  background: var(--green-dark);
+  color: #fff;
+}
+.offer-card--highlight .offer-card__btn:hover { background: var(--green-mid); border-color: var(--green-mid); }
 
 /* APP STRIP */
 .app-strip {
