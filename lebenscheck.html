@@ -90,7 +90,6 @@
   <div class="lc-wrap">
     <div class="check-card" id="checkCard">
 
-      <!-- INTRO -->
       <div id="checkIntro" class="check-panel">
         <div class="check-intro-icons">
           <span>💪</span><span>🥗</span><span>😴</span><span>🧠</span><span>❤️</span><span>🎯</span>
@@ -100,7 +99,6 @@
         <button class="btn btn--primary" id="checkStart">Jetzt starten →</button>
       </div>
 
-      <!-- QUESTIONS -->
       <div id="checkQuestions" class="check-panel" style="display:none">
         <div class="check-progress-bar">
           <div class="check-progress-fill" id="checkProgressFill"></div>
@@ -126,7 +124,6 @@
         </div>
       </div>
 
-      <!-- RESULT -->
       <div id="checkResult" class="check-panel" style="display:none">
         <div class="check-result-inner">
           <div class="check-radar-wrap">
@@ -135,7 +132,7 @@
           <div class="check-result-text">
             <div class="check-result-score">
               <span id="resultAvgNum">—</span>
-              <span>/10</span>
+              <span>/4</span>
               <span class="check-result-score-label" id="resultAvgLabel"></span>
             </div>
             <h3 id="resultTitle"></h3>
@@ -205,7 +202,7 @@
 
       const numWrap = document.getElementById('checkScoreNums');
       numWrap.innerHTML = '';
-      for (let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 4; i++) {
         const btn = document.createElement('button');
         btn.className = 'check-num' + (i === selected ? ' check-num--active' : '') + ' check-num--' + colorClass(i);
         btn.textContent = i;
@@ -222,7 +219,7 @@
       }
     }
 
-    function colorClass(v) { return v <= 3 ? 'low' : v <= 6 ? 'mid' : 'high'; }
+    function colorClass(v) { return v === 1 ? 'low' : v === 2 ? 'mid' : 'high'; }
 
     function showResult() {
       questions.style.display = 'none';
@@ -233,10 +230,10 @@
       document.getElementById('resultAvgNum').textContent = avg.toFixed(1);
 
       let avgLabel, title, text;
-      if (avg >= 7.5) {
+      if (avg >= 3) {
         avgLabel = '🌟 Stark aufgestellt'; title = 'Du bist auf einem guten Weg!';
         text = 'Deine Gesamtbalance ist beeindruckend. Mit gezieltem Coaching kannst du die letzten Potenziale heben und dauerhaft auf diesem Level bleiben.';
-      } else if (avg >= 5) {
+      } else if (avg >= 2) {
         avgLabel = '⚡ Potenzial vorhanden'; title = 'Solide Basis — aber da ist mehr drin!';
         text = 'Du machst vieles richtig, doch einige Bereiche kosten dich Energie, die du für das Wesentliche nutzen könntest. Gezieltes Coaching kann hier den Unterschied machen.';
       } else {
@@ -255,20 +252,20 @@
       areasEl.innerHTML = weak.map(({s,i}) =>
         `<div class="result-area-row result-area-row--weak">
           <span>${AREAS[i].emoji} ${AREAS[i].name}</span>
-          <span class="result-area-score">${s}/10</span>
+          <span class="result-area-score">${s}/4</span>
          </div>`
       ).join('') + strong.map(({s,i}) =>
         `<div class="result-area-row result-area-row--strong">
           <span>${AREAS[i].emoji} ${AREAS[i].name}</span>
-          <span class="result-area-score">${s}/10</span>
+          <span class="result-area-score">${s}/4</span>
          </div>`
       ).join('');
 
       const fitScore = (scores[0] + scores[1]) / 2;
       const lifeScore= (scores[2] + scores[3] + scores[4]) / 3;
       let ctaText = 'Kostenloses Erstgespräch →';
-      if (fitScore < lifeScore && fitScore < 6)       ctaText = 'Fitness Coaching anfragen →';
-      else if (lifeScore < fitScore && lifeScore < 6) ctaText = 'Lifestyle Coaching anfragen →';
+      if (fitScore < lifeScore && fitScore < 2.5)       ctaText = 'Fitness Coaching anfragen →';
+      else if (lifeScore < fitScore && lifeScore < 2.5) ctaText = 'Lifestyle Coaching anfragen →';
       else                                             ctaText = 'Ganzheitliches Coaching anfragen →';
       document.getElementById('resultCta').textContent = ctaText;
 
@@ -285,7 +282,7 @@
       const n  = scores.length;
       const angle = i => (i * 2 * Math.PI / n) - Math.PI / 2;
       let progress = 0;
-      const targetScores = scores.map(s => s / 10);
+      const targetScores = scores.map(s => s / 4);
       const curScores = new Array(n).fill(0);
 
       function drawGrid() {
