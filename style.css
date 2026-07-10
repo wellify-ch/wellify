@@ -6,6 +6,7 @@
   --green-light: #38bdf8;
   --green-pale: #e0f2fe;
   --green-subtle: #f0f9ff;
+  --blue-subtle: #f0f9ff;
   --cream: #f8fafc;
   --dark: #0f172a;
   --dark-2: #1e293b;
@@ -138,8 +139,8 @@ body {
   margin-right: 4px;
 }
 .btn--ghost-nav:hover { border-color: var(--white); color: var(--white); background: rgba(255,255,255,.08); }
-.nav--scrolled .btn--ghost-nav { border-color: var(--border); color: var(--text); }
-.nav--scrolled .btn--ghost-nav:hover { border-color: var(--green-mid); color: var(--green-dark); background: var(--green-subtle); }
+.nav.scrolled .btn--ghost-nav { border-color: var(--border); color: var(--text); }
+.nav.scrolled .btn--ghost-nav:hover { border-color: var(--green-mid); color: var(--green-dark); background: var(--green-subtle); }
 .btn--full { width: 100%; justify-content: center; }
 
 /* NAV */
@@ -1825,7 +1826,7 @@ body {
 
   /* Contact */
   .contact__form { padding: 24px 16px; }
-  .contact__form-col { grid-template-columns: 1fr; }
+  .contact__form-col { flex-direction: column; }
 
   /* Footer */
   .footer__links { grid-template-columns: 1fr; gap: 32px; }

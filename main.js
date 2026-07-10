@@ -63,6 +63,8 @@ window.addEventListener('scroll', () => {
     if (window.scrollY >= section.offsetTop - 120) current = section.id;
   });
   navLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === `#${current}` ? '' : '';
+    const active = link.getAttribute('href') === `#${current}`;
+    link.style.color = active ? 'var(--green-light)' : '';
+    link.style.fontWeight = active ? '700' : '';
   });
 }, { passive: true });

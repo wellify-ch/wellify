@@ -1,8 +1,14 @@
-const CACHE = 'wellify-v1';
+const CACHE = 'wellify-v2';
 const ASSETS = [
   '/',
   '/index.html',
   '/style.css',
+  '/main.js',
+  '/manifest.json',
+  '/favicon.png',
+  '/wellify-logo.png',
+  '/yannic-portrait.png',
+  '/pullup-graphic.svg',
   '/fitness-graphic.svg',
   '/lifestyle-graphic.svg',
   '/coaching-graphic.svg',

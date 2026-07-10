@@ -210,7 +210,7 @@
   </div>
 
   <!-- DASHBOARD -->
-  <div id="appDashboard" style="display:flex">
+  <div id="appDashboard" style="display:none">
     <header class="member-header">
       <div class="member-logo">Wellify <span>Mitgliederbereich</span></div>
       <button class="member-logout" id="dashLogoutBtn">Abmelden</button>
@@ -256,7 +256,7 @@
     function showPanel(id) {
       ['appLoading','appAuth','appPending','appDashboard'].forEach(p => {
         const el = $(p);
-        el.style.display = p === id ? (p === 'appDashboard' ? 'flex' : 'flex') : 'none';
+        el.style.display = p === id ? 'flex' : 'none';
       });
     }
 
@@ -326,14 +326,14 @@
       $('welcomeName').textContent = 'Willkommen, ' + name + '!';
       showPanel('appDashboard');
       loadMessages(userId);
-      subscribeMessages(userId, session.access_token);
+      subscribeMessages(userId);
     }
 
     // Poll/listen for approval
     function listenForApproval(email, userId) {
       const ch = sb.channel('approval-watch')
         .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'approved_emails' }, async () => {
-          const { data } = await sb.from('approved_emails').select('email').maybeSingle();
+          const { data } = await sb.from('approved_emails').select('email').eq('email', email).maybeSingle();
           if (data) { ch.unsubscribe(); await checkSession(); }
         })
         .subscribe();
@@ -354,7 +354,7 @@
       scrollToBottom();
     }
 
-    function subscribeMessages(userId, accessToken) {
+    function subscribeMessages(userId) {
       sb.channel('member-chat', { config: { private: false } })
         .on('postgres_changes', {
           event: 'INSERT', schema: 'public', table: 'messages',
