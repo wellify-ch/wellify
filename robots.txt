@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /coach.html
+
+Sitemap: https://wellify.ch/sitemap.xml
