@@ -655,6 +655,11 @@ body {
   padding: 40px;
   border-right: 1px solid #f1f5f9;
 }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 
 @media (max-width: 768px) {
   .coaching-card-top {
@@ -671,10 +676,17 @@ body {
     border-right: none;
     border-bottom: 1px solid #f1f5f9;
   }
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 480px) {
   .coaching-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-grid {
     grid-template-columns: 1fr;
   }
 }
