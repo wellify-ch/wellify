@@ -24,7 +24,7 @@
   <meta name="twitter:title" content="Personal Trainer Schweiz | Wellify" />
   <meta name="twitter:description" content="Yannic Henchoz — Personal Trainer & Coach aus Zürich. Individuelles Coaching online & vor Ort in der Schweiz." />
   <meta name="twitter:image" content="https://wellify.ch/yannic-portrait.png" />
-  <link rel="stylesheet" href="style.css?v=20260615" />
+  <link rel="stylesheet" href="style.css?v=20260728" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -307,7 +307,7 @@
       <div style="background:#fff;border:1px solid var(--border,#e2e8f0);border-radius:20px;overflow:hidden;box-shadow:0 4px 32px rgba(3,105,161,.07);margin-bottom:48px;">
 
         <!-- TOP: Bild + Intro -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;min-height:320px;">
+        <div class="coaching-card-top">
           <div style="background:linear-gradient(135deg,#0369a1 0%,#082f49 100%);padding:48px 40px;display:flex;flex-direction:column;justify-content:center;">
             <p style="color:rgba(255,255,255,.65);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;">Personal Training & Coaching</p>
             <h3 style="color:#fff;font-family:'Playfair Display',serif;font-size:28px;font-weight:600;line-height:1.3;margin-bottom:16px;">Dein Weg. Dein Tempo. Meine volle Aufmerksamkeit.</h3>
@@ -323,7 +323,7 @@
         <!-- BOTTOM: Was enthalten ist -->
         <div style="padding:40px;">
           <p style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted,#64748b);margin-bottom:24px;">Was im Coaching enthalten ist</p>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px;">
+          <div class="coaching-features-grid">
 
             <div style="display:flex;gap:14px;align-items:flex-start;">
               <div style="width:40px;height:40px;border-radius:12px;background:#eff6ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
@@ -428,10 +428,10 @@
 
       <!-- APP UNIFIED CARD -->
       <div style="background:#fff;border:1px solid var(--border,#e2e8f0);border-radius:20px;overflow:hidden;box-shadow:0 4px 32px rgba(3,105,161,.07);">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+        <div class="app-card-grid">
 
           <!-- Links: Was die App kann -->
-          <div style="padding:40px;border-right:1px solid #f1f5f9;">
+          <div class="app-card-left">
             <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#0369a1,#0284c7);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" width="26" height="26"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
             </div>
@@ -649,7 +649,7 @@
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>Das hängt vom gewählten Paket ab. Je nach Paket findet das Coaching rein online statt oder hybrid — also eine Kombination aus Online und vor Ort, ganz wie du es dir wünschst. Das besprechen wir gemeinsam beim Erstgespräch.</p>
+            <p>Das Coaching findet online, vor Ort in Zürich oder hybrid statt — ganz wie es für dich am besten passt. Das besprechen wir gemeinsam beim Erstgespräch.</p>
           </div>
         </div>
         <div class="faq__item">
@@ -681,11 +681,11 @@
         </div>
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>Was ist der Unterschied zwischen Fitness- und Lifestyle-Coaching?</span>
+            <span>Was genau ist im Coaching enthalten?</span>
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>Fitness Coaching fokussiert auf Training und Ernährung — Kraft, Ausdauer, Körperzusammensetzung. Lifestyle Coaching geht tiefer: Schlaf, Stress, Gewohnheiten, mentale Stärke. Das ganzheitliche Paket kombiniert beides für maximale Transformation.</p>
+            <p>Das Coaching ist ganzheitlich: Fitness & Training, Ernährung, Lifestyle-Gewohnheiten, Schlaf und mentale Stärke. Dazu kommt direkter Chat-Support, regelmässige Video-Calls und die Wellify App für dein tägliches Tracking. Was du davon brauchst — und in welcher Intensität — besprechen wir individuell.</p>
           </div>
         </div>
         <div class="faq__item">
@@ -750,10 +750,9 @@
             <div class="form-group">
               <label for="bookService">Ich interessiere mich für</label>
               <select id="bookService">
-                <option value="Self-Runner (App + Einführungscall)">Self-Runner (App + Einführungscall)</option>
                 <option value="Online Coaching">Online Coaching</option>
-                <option value="Hybrid Coaching">Hybrid Coaching</option>
-                <option value="Einzeltraining">Einzeltraining</option>
+                <option value="Vor Ort in Zürich">Vor Ort in Zürich</option>
+                <option value="Hybrid (Online & vor Ort)">Hybrid (Online & vor Ort)</option>
                 <option value="Noch nicht sicher">Noch nicht sicher</option>
               </select>
             </div>
@@ -802,7 +801,7 @@
           <h4>Informationen</h4>
           <a href="#about">Über mich</a>
           <a href="#process">Ablauf</a>
-          <a href="#services">Preise</a>
+          <a href="#contact">Erstgespräch</a>
         </div>
         <div>
           <h4>Rechtliches</h4>
