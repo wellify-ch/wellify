@@ -1761,6 +1761,44 @@ body {
   display: block;
 }
 
+/* LIFESTYLE BANNER */
+.lifestyle-banner {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.lifestyle-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.lifestyle-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.1) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+.lifestyle-banner__quote {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0,0,0,.4);
+  max-width: 600px;
+  padding: 0 24px;
+}
+
 /* SERVICE CARD IMAGE */
 .service-card__img {
   width: calc(100% + 64px);
