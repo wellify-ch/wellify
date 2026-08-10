@@ -1756,7 +1756,9 @@ body {
 /* ABOUT PHOTO */
 .about__photo {
   width: 100%;
-  height: auto;
+  height: 480px;
+  object-fit: cover;
+  object-position: top center;
   border-radius: var(--radius-lg);
   display: block;
 }
