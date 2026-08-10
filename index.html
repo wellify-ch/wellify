@@ -1184,8 +1184,7 @@
           submitBtn.textContent = 'Erstgespräch anfragen';
           showError('Fehler beim Senden. Bitte versuch es erneut oder schreib auf WhatsApp.');
         } else {
-          formCard.style.display = 'none';
-          successEl.style.display = 'flex';
+          window.location.href = '/danke.html';
         }
       });
 
