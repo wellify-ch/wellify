@@ -333,6 +333,23 @@ body {
   margin-bottom: 28px;
 }
 
+.hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hero__stars {
+  color: #facc15;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.hero__trust-text {
+  color: rgba(255,255,255,.8);
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .hero__title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(40px, 7vw, 78px);
@@ -2074,3 +2091,8 @@ body {
   flex-shrink: 0;
 }
 .dsg-banner__close:hover { background: var(--green-mid); }
+
+@media (max-width: 600px) {
+  .dsg-banner { font-size: 12px; padding: 10px 16px; gap: 10px; }
+  .dsg-banner__close { padding: 5px 14px; font-size: 13px; }
+}

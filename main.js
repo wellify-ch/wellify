@@ -1,14 +1,31 @@
+// Splash überspringen bei Ad-Traffic (UTM) oder wiederkehrenden Besuchern
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const hasUtm = params.has('utm_source') || params.has('utm_medium') || params.has('gclid') || params.has('fbclid');
+  const returning = sessionStorage.getItem('visited');
+  if (hasUtm || returning) {
+    const splash = document.getElementById('logoSplash');
+    if (splash) splash.style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+  sessionStorage.setItem('visited', '1');
+})();
+
 // Nav scroll effect — versteckt auf Splash, erscheint danach
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  const pastSplash = window.scrollY > window.innerHeight * 0.8;
+  const splash = document.getElementById('logoSplash');
+  const splashHidden = !splash || splash.style.display === 'none';
+  const pastSplash = splashHidden || window.scrollY > window.innerHeight * 0.8;
   nav.classList.toggle('scrolled', pastSplash);
   nav.style.opacity = pastSplash ? '1' : '0';
   nav.style.pointerEvents = pastSplash ? 'auto' : 'none';
 });
 // Initialzustand
-nav.style.opacity = '0';
-nav.style.pointerEvents = 'none';
+const _splash = document.getElementById('logoSplash');
+const _splashHidden = !_splash || _splash.style.display === 'none';
+nav.style.opacity = _splashHidden ? '1' : '0';
+nav.style.pointerEvents = _splashHidden ? 'auto' : 'none';
 
 // Mobile menu
 const toggle = document.getElementById('navToggle');
